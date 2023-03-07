@@ -1,0 +1,60 @@
+﻿@model IEnumerable<TMS.Models.VehicleInfo>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1 style="margin-bottom:35px; margin-left:260px;">Vehicle Info</h1>
+
+<p>
+    <a class="creation" asp-action="Create">Add New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.VehicleId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Capacity)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AvailSeats)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Isoperable)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RouteInfo)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.VehicleId)
+                </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Capacity)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AvailSeats)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Isoperable)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RouteInfo.RouteId)
+            </td>
+            <td>
+                    <a class="creation1" asp-action="Edit" asp-route-id="@item.VehicleId">Modify</a> |
+                    <a class="creation1" asp-action="Details" asp-route-id="@item.VehicleId">Details</a> |
+                    <a class="creation1" asp-action="Delete" asp-route-id="@item.VehicleId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

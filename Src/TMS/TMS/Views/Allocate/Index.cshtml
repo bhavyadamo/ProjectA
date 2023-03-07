@@ -1,0 +1,66 @@
+﻿@model IEnumerable<TMS.Models.Allocate>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1 style="margin-bottom:30px; margin-left:260px;">Allocation</h1>
+
+<p>
+    <a class="creation" asp-action="Create">Add New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.AllocateId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.VehicleInfo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EmployeeInfo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RouteInfo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.VehicleInfo.Capacity)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.VehicleInfo.AvailSeats)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.AllocateId)
+                </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.VehicleInfo.VehicleId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmployeeInfo.EmpId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RouteInfo.RouteId)
+            </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.VehicleInfo.Capacity)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.VehicleInfo.AvailSeats)
+                </td>
+            <td>
+                    <a class="creation1" asp-action="Edit" asp-route-id="@item.AllocateId">Modify</a> |
+                    <a class="creation1" asp-action="Details" asp-route-id="@item.AllocateId">Details</a> |
+                    <a class="creation1" asp-action="Delete" asp-route-id="@item.AllocateId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

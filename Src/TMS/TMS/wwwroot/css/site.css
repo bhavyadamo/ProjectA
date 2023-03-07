@@ -1,0 +1,109 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+    background-image: url('../images/bg7.jpg');
+    background-size: cover;
+}
+#navbars {
+    
+    background-color:dodgerblue;
+}
+.nav-link {
+    margin-left: 50px;
+    font-size: 22px;
+    font-family: 'Arial Rounded MT';
+    font-weight:bold;
+    border-radius: 10px;
+}
+    .nav-link:hover {
+        background-color:black;
+        border-radius: 5px;
+    }
+
+.pb-3 {
+    margin-top: 30px;
+}
+
+footer {
+    background-color: #282A35;
+}
+.table {
+    --bs-table-bg: transparent;
+    --bs-table-accent-bg: transparent;
+    --bs-table-striped-color: #212529;
+    --bs-table-striped-bg: rgba(0, 0, 0, 0.05);
+    --bs-table-active-color: #212529;
+    --bs-table-active-bg: rgba(0, 0, 0, 0.1);
+    --bs-table-hover-color: #212529;
+    --bs-table-hover-bg: rgba(0, 0, 0, 0.075);
+    width: 70%;
+    margin-bottom: 1rem;
+    color: #212529;
+    vertical-align: top;
+    border-color: #dee2e6;
+    padding: 1px;
+    text-align:left;
+}
+
+#flight {
+    margin-top: 155px;
+    margin-right: 600px;
+    width:600px;
+    height:400px;
+}
+.creation {
+    font-size: 17px;
+    font-family: 'Arial Rounded MT';
+    text-decoration: none;
+    background-color: dodgerblue;
+    border-radius: 5px;
+    color:white;
+    padding: 10px;
+}
+
+    .creation:hover {
+        
+        color: dodgerblue;
+        background-color: transparent;
+        border-radius: 5px;
+        border: 3px solid dodgerblue;
+        padding: 10px;
+    }
+.creation1 {
+    
+    font-family: 'Arial Rounded MT';
+    text-decoration: none;
+    border-radius: 5px;
+    border: 2px solid dodgerblue;
+    padding: 6px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+
+    .creation1:hover {
+        background-color: dodgerblue;
+        color: white;
+        border-radius: 5px;
+        padding: 6px;
+        padding-top: 3px;
+        padding-bottom: 3px;
+    }
+
+
